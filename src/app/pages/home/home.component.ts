@@ -10,7 +10,7 @@ import { Olympic } from '../../core/models/Olympic';
 })
 export class HomeComponent implements OnInit {
 
-  public olympics$: Observable<any> = of(null);
+  public olympics$: Observable<Olympic[]> =of([]);
   countries$: any =[]; 
 
   constructor(private olympicService: OlympicService) {}
@@ -24,10 +24,10 @@ export class HomeComponent implements OnInit {
 
 
   getYears(){
-    var my_object:any = localStorage.getItem('chart_data');
-    var values = JSON.parse(my_object);
+   let my_object:any = localStorage.getItem('chart_data');
+    let values = JSON.parse(my_object);
 
-    let years : any =[];
+    let years : number[] =[];
     
     values.forEach((item: any) => {
       
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
    
     let result = this.removeDuplicateYears(years);
     return result;
-//console.log("Years",result); 
+ 
   }
 
 

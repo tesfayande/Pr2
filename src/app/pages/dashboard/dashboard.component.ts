@@ -74,7 +74,7 @@ this.olympicsService.getOlympics().subscribe((data: Olympic[])=>{
       localStorage.setItem('chart_data',  JSON.stringify(data));
     }) 
 
-    //console.log("Years",this.getYears());
+   
     
   }
 
@@ -84,9 +84,9 @@ this.olympicsService.getOlympics().subscribe((data: Olympic[])=>{
 
     
 
-    var my_object:any = localStorage.getItem('chart_data');
+   let my_object:any = localStorage.getItem('chart_data');
 
-    var values = JSON.parse(my_object);
+    let values = JSON.parse(my_object);
 
     values.forEach((item: any) => {
       
@@ -114,10 +114,10 @@ this.olympicsService.getOlympics().subscribe((data: Olympic[])=>{
 
   
 
-    var my_object:any = localStorage.getItem('chart_data');
+   let my_object:any = localStorage.getItem('chart_data');
  
   
-     var values = JSON.parse(my_object);
+    let values = JSON.parse(my_object);
  
      
      

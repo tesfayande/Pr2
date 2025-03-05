@@ -70,7 +70,7 @@ export class DetailsComponent {
     this.id=id;
 
     this.olympicsService.getOlympics().subscribe(data=>{
-      //this.country= data;
+      
 
 
       for (let i = 0; i < data.length; i++) {
@@ -93,8 +93,8 @@ export class DetailsComponent {
     
     let data : any = [];
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    var my_object:any = localStorage.getItem('chart_data');
-    var values = JSON.parse(my_object);
+    let my_object:any = localStorage.getItem('chart_data');
+    let values = JSON.parse(my_object);
     
     values.forEach((item: any) => {
       if (item.id ===id) {
@@ -118,8 +118,8 @@ export class DetailsComponent {
 
   getCountryAtthletes(id:number){
     
-    var my_object:any = localStorage.getItem('chart_data');
-    var values = JSON.parse(my_object);
+    let my_object:any = localStorage.getItem('chart_data');
+    let values = JSON.parse(my_object);
     let sum = 0;
     
     values.forEach((item: any) => {
@@ -139,8 +139,8 @@ export class DetailsComponent {
 
   getCountryMedals(id:number)
   {
-    var my_object:any = localStorage.getItem('chart_data');
-    var values = JSON.parse(my_object);
+   let my_object:any = localStorage.getItem('chart_data');
+    let values = JSON.parse(my_object);
     let sum = 0;
     values.forEach((item: any) => {
       if (item.id ===id) {
