@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project was created 
 
-    https://openclassrooms.com/fr/paths/533-developpeur-full-stack-java-et-angular
+[Openclassrooms Developpeur Full-stack java et angular](https://openclassrooms.com/fr/paths/533-developpeur-full-stack-java-et-angular).
 
 ## Installation
 
