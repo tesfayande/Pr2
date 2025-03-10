@@ -4,6 +4,16 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Don't forget to install your node_modules before starting (`npm install`).
 
+## Installation
+
+ 1 Clone  
+  
+  git clone  https://github.com/tesfayande/Pr2.git
+
+ 2 Download
+  
+   Download zip file
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
