@@ -14,8 +14,7 @@ import { Olympic } from '../../core/models/Olympic';
 export class DashboardComponent {
 
 
-  countries: Olympic[] = [];
-  chartData: any = [];
+  public countries: Olympic[] = [];
   public chartoptions:AgChartOptions;
 
   constructor(public olympicsService: OlympicService) { 
@@ -54,17 +53,7 @@ export class DashboardComponent {
     };
    
 
-      
-
-
-
-   
-
   }
-
-
-
-
 
   ngOnInit(): void {
     
@@ -78,19 +67,17 @@ this.olympicsService.getOlympics().subscribe((data: Olympic[])=>{
     
   }
 
-
-
   getChartData(){
 
     
-
-   let my_object:any = localStorage.getItem('chart_data');
+    let chartData: any[] = [];
+   let my_object:any= localStorage.getItem('chart_data');
 
     let values = JSON.parse(my_object);
 
     values.forEach((item: any) => {
       
-      this.chartData.push({
+    chartData.push({
         id:item.id,
         asset:item.country,
         amount:this.getCountryMedals(item.id)
@@ -99,54 +86,25 @@ this.olympicsService.getOlympics().subscribe((data: Olympic[])=>{
     
     });
     
-
-
-    return this.chartData;
+    return chartData;
    
   }
 
 
-  
-
-
-
   getCountryMedals(id:number){
-
-  
-
-   let my_object:any = localStorage.getItem('chart_data');
- 
-  
+    let my_object:any = localStorage.getItem('chart_data');
     let values = JSON.parse(my_object);
- 
-     
-     
- let sum = 0;
- 
- values.forEach((item: any) => {
-   if (item.id ===id) {
-     
- 
-     for (let i = 0; i < item.participations.length; i++) {
-       sum += item.participations[i].medalsCount;
-     }
-     
- 
-   }
- 
- });
- 
- 
- 
- 
- 
+    let sum = 0;
+    
+    values.forEach((item: any) => {
+      
+      if (item.id ===id) {
+        for (let i = 0; i < item.participations.length; i++) {
+          sum += item.participations[i].medalsCount;
+        }
+      }
+    });
+    
     return sum;
-   
-   
-     
-   }
-
-  
-
-
+  }
 }

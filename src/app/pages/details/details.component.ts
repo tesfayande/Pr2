@@ -1,14 +1,7 @@
 import { Component } from '@angular/core';
-
-
 import { ActivatedRoute, Router } from '@angular/router';
-
 import { OlympicService  } from '../../core/services/olympic.service';
-import { Olympic } from '../../core/models/Olympic';
 import { Participation} from '../../core/models/Participation';
-
-
-import { AgCharts } from "ag-charts-angular";
 import { AgChartOptions } from "ag-charts-community";
 
 
@@ -20,30 +13,19 @@ import { AgChartOptions } from "ag-charts-community";
 })
 export class DetailsComponent {
 
-  chartData: any = [];
+  chartData:Participation[] = [] = [];
   id!: number;
-  olympic!: Olympic;
-
   country!:any;
-
   public errorMessage = false;
-
-  participations: Participation[] = [];
-
   public chartoptions:AgChartOptions;
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
 
 
 
   constructor(public olympicsService: OlympicService,private route: ActivatedRoute,private router: Router)
-  { this.chartoptions = {
-     /* title: {
-        text: this.country.country,
-      },*/
+  { 
+    
+    
+    this.chartoptions = {
       data: this.getChartData(),
       series: [
         {
