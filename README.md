@@ -8,7 +8,7 @@ Don't forget to install your node_modules before starting (`npm install`).
 
  1 Clone  
   
-  git clone  https://github.com/tesfayande/Pr2.git
+  `git clone  https://github.com/tesfayande/Pr2.git`
 
  2 Download
   
