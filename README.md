@@ -6,20 +6,24 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Clone  
 
- 1.Open a terminal or command prompt and navigate to the directory where you want to clone the repository.
+
+1. Open a terminal or command prompt and navigate to the directory where you want to clone the repository.
 
 Run the following command to clone the repository:
 
-  `git clone  https://github.com/tesfayande/Pr2.git`
+    `git clone  https://github.com/tesfayande/Pr2.git`
 
- 2. Navigate to the cloned repository directory:
+2. Navigate to the cloned repository directory:
    
    `cd Pr2`
+
+3. Install the required dependencies by running the following command:
    
- 3. Install the required dependencies by running the following command:
-   `npm install`
- 4. Run the Angular app by using the following command:
-   `npm start` or `ng serve`
+    `npm install`
+
+4. Run the Angular app by using the following command:
+    
+    `npm start` or `ng serve`
 
 This will start the development server and the app will be available at http://localhost:4200
 
