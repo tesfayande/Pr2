@@ -1,7 +1,6 @@
 # OlympicGames Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
-This was focused on project 2 of [Openclassrooms Developpeur Full-stack java et angular](https://openclassrooms.com/fr/paths/533-developpeur-full-stack-java-et-angular),to dcreate a dashboard front end application using angular.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3,focused on project 2 of [Openclassrooms Developpeur Full-stack java et angular](https://openclassrooms.com/fr/paths/533-developpeur-full-stack-java-et-angular),to dcreate a dashboard front end application using angular.
 
 ## Installation
 
