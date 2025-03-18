@@ -12,7 +12,9 @@ import { Color, ScaleType} from '@swimlane/ngx-charts';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
+
 export class HomeComponent implements OnInit {
+
   public responsiveSubscription! : Subscription;
   public olympicsSubscription! : Subscription;
   public olympics: Olympic[] = [];
@@ -27,7 +29,7 @@ export class HomeComponent implements OnInit {
     name: 'Variation',
     selectable: true,
     group: ScaleType.Ordinal,
-   domain: ['#a80c62','#0a78c2', '#f5810c','#a31c39', '#218052']
+   domain: ['#004D99','#3D7317','#876FD4','#003366','#CA6C0F']
   };
   // pie chart attributes
   showLegend: boolean = false;

@@ -1,7 +1,7 @@
 .loader {
     border: 11px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 11px solid #3498db;
+    border-top: 11px solid #003366;
     width: 60px;
     height: 60px;
     -webkit-animation: spin 1s linear infinite;
@@ -52,7 +52,7 @@
             &__title {
                 width: fit-content;
                 padding: 0 20px;
-                background-color: #078984;
+                background-color: #003366;
                 border-radius: 1rem;
 
                 &__name {
@@ -68,8 +68,8 @@
                 &__text {
                     display: flex;
                     flex-direction: column;
-                    border: 2px solid #078984;
-                    background-color:#078984;
+                    border: 2px solid #003366;
+                    background-color: #003366;
                     border-radius: 1rem;
                     padding: 2px 7px;
 
@@ -99,4 +99,8 @@
     flex-wrap: wrap;
     column-gap: 1rem;
     justify-content: center;
+}
+
+.ngx-charts .gridline-path {
+    stroke: #129494 !important;
 }

@@ -1,7 +1,7 @@
 .loader {
     border: 11px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 11px solid #078984;
+    border-top: 11px solid #003366;
     width: 60px;
     height: 60px;
     -webkit-animation: spin 1s linear infinite;
@@ -50,7 +50,7 @@
             row-gap: 1rem;
             align-items: center;
             &__medals {
-                background-color:#078984;
+                background-color:#003366;
                 border-radius: 1rem;
                 width: fit-content;
                 padding: 0 20px;
@@ -66,8 +66,8 @@
                 &__text {
                     display: flex;
                     flex-direction: column;
-                    border: 2px solid #078984;
-                    background-color:#078984;
+                    border: 2px solid #003366;
+                    background-color:#003366;
                     border-radius: 1rem;
                     padding: 2px 7px;
 
@@ -93,7 +93,7 @@
                 margin: 0;
                 padding: 0;
                 &__wrap{
-                    background-color: #078984;
+                    background-color: #003366;
                     width: 100%;
                     height: 100%;
                     padding: 0;

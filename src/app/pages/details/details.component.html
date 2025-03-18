@@ -1,6 +1,6 @@
 
   
-<main class="country">
+<main *ngIf="errorMessage; else countryNotFound" class="country" >
   
     <div *ngIf="!loaded" class="loader"></div>
     <section *ngIf="country" class="country__detail">
@@ -28,6 +28,7 @@
         <article>
             <ngx-charts-line-chart 
                 [view]="view" 
+                [scheme]="colorScheme"
                 [legend]="legend" 
                 [showXAxisLabel]="showXAxisLabel"
                 [xAxis]="xAxis" 
@@ -45,3 +46,18 @@
 
     </section>
 </main>
+
+
+
+<ng-template #countryNotFound>
+  <div class="row">
+   <div class="col-12">
+     <div class="center">
+        <h2>No Country found</h2>
+        <a routerLink="">Go back</a>
+      </div>
+    </div>
+  </div>
+
+
+</ng-template>

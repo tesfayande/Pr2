@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { Color, ScaleType} from '@swimlane/ngx-charts';
+
 import { Olympic } from 'src/app/core/models/Olympic';
 import { OlympicService } from 'src/app/core/services/olympic.service';
 import { ResponsiveService } from 'src/app/core/services/responsive.service';
@@ -12,6 +14,8 @@ import { ResponsiveService } from 'src/app/core/services/responsive.service';
 })
 export class DetailsComponent implements OnInit, OnDestroy {
 
+
+  public errorMessage = false;
   public countryCheckSubscription!: Subscription;
   public responsiveSubscription!:Subscription
   public medals: number | undefined = 0;
@@ -40,7 +44,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
   yScaleMin!: number;
   yScaleMax!: number;
   showXAxisLabel: boolean = true;
-  xAxisLabel: string = 'Dates';
+  xAxisLabel: string = 'Years';
   timeline: boolean = false;
   autoScale: boolean = true;
 
@@ -48,6 +52,14 @@ export class DetailsComponent implements OnInit, OnDestroy {
   height: number = 600;
   view: [number, number] = [this.width, this.height]
 
+
+   // Apply Color
+    colorScheme: Color = {
+      name: 'Variation',
+      selectable: true,
+      group: ScaleType.Ordinal,
+     domain: ['#b11159']
+    };
 
   constructor(private route: ActivatedRoute, private router: Router, private olympicService: OlympicService, private responsiveService: ResponsiveService) {
     /**
@@ -68,13 +80,15 @@ export class DetailsComponent implements OnInit, OnDestroy {
 
       // Country not found, redirection to error page
       if (res == 'not_found' && res != undefined) {
-        this.router.navigateByUrl('**');
+        //this.router.navigateByUrl('**');
+        this.errorMessage = false;
       }
       // Country found, get data
       else if (res != undefined) {
         this.olympicService.getCountry(id).subscribe((country) => {
           this.loaded=true;
           this.country=country;
+          this.errorMessage = true;
           // count all country medals
           this.medals = this.country?.participations.map((participation) => {
             return participation.medalsCount;
